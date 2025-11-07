@@ -319,18 +319,26 @@
       showImage(index);
     });
 
-    // 语言切换功能
+    // ======== 语言切换功能 ========
     const langBtn = document.querySelector('.lang-select');
+    let currentLang = 'en'; // 默认英文
+    
+    // 页面加载时初始化为英文（把 data-en 的内容显示出来）
+    document.querySelectorAll('[data-en]').forEach(el => {
+      el.textContent = el.getAttribute('data-en');
+    });
+    
     langBtn.addEventListener('click', () => {
-      const currentLang = langBtn.textContent.includes('EN') ? 'en' : 'zh';
       const newLang = currentLang === 'en' ? 'zh' : 'en';
       document.querySelectorAll('[data-' + newLang + ']').forEach(el => {
         el.textContent = el.getAttribute('data-' + newLang);
       });
-      langBtn.textContent = newLang === 'en' ? '🌐 EN' : '🌐 中文';
+      currentLang = newLang;
+      langBtn.textContent = currentLang === 'en' ? '🌐 EN' : '🌐 中文';
     });
   </script>
 </body>
 </html>
+
 
 
