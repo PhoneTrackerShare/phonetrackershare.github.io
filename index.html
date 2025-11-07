@@ -47,40 +47,34 @@
       font-weight: bold;
       color: #fff;
     }
-    .download-btn {
-      background: linear-gradient(135deg, #4facfe, #6a11cb);
-      color: #fff;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
-      margin-top: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      transition: transform 0.2s, box-shadow 0.3s;
-    }
-    .download-btn:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-    }
-    .dark-mode-toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: none;
-      border: 2px solid #fff;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      font-size: 18px;
-      color: #fff;
-      transition: all 0.3s;
-    }
-    body.dark .dark-mode-toggle {
-      border-color: #fff;
-      color: #fff;
-    }
+     .store-btn-container {
+    margin-top: 40px; /* 控制标题和按钮之间的距离 */
+  }
+
+  .store-btn-container img {
+    height: 55px;
+    transition: transform 0.2s ease;
+  }
+
+  .store-btn-container img:hover {
+    transform: translateY(-2px) scale(1.03);
+  }
+
+  /* ===== 夜间模式按钮 ===== */
+  .dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #fff;
+    transition: all 0.3s;
+  }
     .hero {
       text-align: center;
       padding: 20px 20px 10px;
@@ -194,7 +188,13 @@
 <body>
   <header>
     <h1>📱 Phone Tracker</h1>
-    <button class="download-btn" onclick="window.open('https://www.apple.com/app-store/', '_blank')">🍎 App Store</button>
+    <div class="store-btn-container">
+        <a href="https://apps.apple.com/us/app/pdf-reader-editor-scanner/id6739480825" target="_blank" style="display:inline-block;">
+            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/white/en-us?size=250x83"
+                alt="Download on the App Store"
+                style="height: 50px;">
+        </a>
+    </div>
     <button class="dark-mode-toggle">🌙</button>
   </header>
 
@@ -252,6 +252,11 @@
   </section>
 
   <footer>
+    <div class="contact">
+        <h3>📩 联系我们</h3>
+        <p>如有问题或建议，请发送邮件至：<a href="mailto:phonetracker.feedback@outlook.com">pdfreader.feedback@outlook.com</a></p>
+    </div>
+    <br>
     <p>© 2025 Phone Tracker 版权所有</p>
   </footer>
 
@@ -284,4 +289,5 @@
   </script>
 </body>
 </html>
+
 
