@@ -47,34 +47,49 @@
       font-weight: bold;
       color: #fff;
     }
-     .store-btn-container {
-    margin-top: 40px; /* 控制标题和按钮之间的距离 */
-  }
+    .store-btn-container {
+      margin-top: 40px;
+    }
+    .store-btn-container img {
+      height: 55px;
+      transition: transform 0.2s ease;
+    }
+    .store-btn-container img:hover {
+      transform: translateY(-2px) scale(1.03);
+    }
+    .dark-mode-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255,255,255,0.8);
+      border: 2px solid #fff;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #000;
+      transition: all 0.3s;
+    }
+    /* ===== 语言选择按钮 ===== */
+    .lang-select {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background: rgba(255,255,255,0.8);
+      border: 2px solid #fff;
+      color: #000;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      padding: 6px 10px;
+      transition: all 0.3s;
+    }
+    .lang-select:hover {
+      background: rgba(255,255,255,1);
+      transform: scale(1.05);
+    }
 
-  .store-btn-container img {
-    height: 55px;
-    transition: transform 0.2s ease;
-  }
-
-  .store-btn-container img:hover {
-    transform: translateY(-2px) scale(1.03);
-  }
-
-  /* ===== 夜间模式按钮 ===== */
-  .dark-mode-toggle {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-    font-size: 18px;
-    color: #fff;
-    transition: all 0.3s;
-  }
     .hero {
       text-align: center;
       padding: 20px 20px 10px;
@@ -187,6 +202,7 @@
 </head>
 <body>
   <header>
+    <button class="lang-select">🌐 EN</button>
     <h1>📱 Phone Tracker</h1>
     <div class="store-btn-container">
         <a href="https://apps.apple.com/us/app/pdf-reader-editor-scanner/id6739480825" target="_blank" style="display:inline-block;">
@@ -199,75 +215,89 @@
   </header>
 
   <section class="hero">
-    <h1>你的安心，只差轻轻一点！</h1>
-    <p>无论是找回丢失手机、追踪家人位置，还是关注孩子的去向，只需轻轻一点，Phone Tracker 就能帮你搞定。</p>
+    <h1 data-zh="你的安心，只差轻轻一点！" data-en="Your peace of mind, just one tap away!">你的安心，只差轻轻一点！</h1>
+    <p data-zh="无论是找回丢失手机、追踪家人位置，还是关注孩子的去向，只需轻轻一点，Phone Tracker 就能帮你搞定。" 
+       data-en="Whether it's finding a lost phone, tracking your family, or keeping an eye on your kids — Phone Tracker has you covered.">
+       无论是找回丢失手机、追踪家人位置，还是关注孩子的去向，只需轻轻一点，Phone Tracker 就能帮你搞定。
+    </p>
   </section>
 
   <section class="carousel">
     <button class="prev">❮</button>
-    <img src="en-1.jpg" class="active" alt="截图1">
-    <img src="en-2.jpg" alt="截图2">
-    <img src="en-3.jpg" alt="截图3">
-    <img src="en-4.jpg" alt="截图4">
-    <img src="en-5.jpg" alt="截图5">
-    <img src="en-6.jpg" alt="截图6">
+    <img src="image/en-1.jpg" class="active" alt="截图1">
+    <img src="image/en-2.jpg" alt="截图2">
+    <img src="image/en-3.jpg" alt="截图3">
+    <img src="image/en-4.jpg" alt="截图4">
+    <img src="image/en-5.jpg" alt="截图5">
+    <img src="image/en-6.jpg" alt="截图6">
     <button class="next">❯</button>
   </section>
 
   <section class="features">
-    <h2>✨ 功能亮点</h2>
+    <h2 data-zh="✨ 功能亮点" data-en="✨ Key Features">✨ 功能亮点</h2>
     <ul>
-      <li>📍 实时位置追踪：随时查看家人或设备的准确位置</li>
-      <li>🕒 位置历史：回顾详细的行动轨迹</li>
-      <li>🚧 安全区域提醒：设置家、学校或公司，进出实时通知</li>
-      <li>🆘 一键SOS：紧急情况下快速发送求助</li>
-      <li>🔎 遗失设备查找：定位丢失或被盗手机</li>
-      <li>📱 多设备支持：一个账号可管理多个设备</li>
+      <li data-zh="📍 实时位置追踪：随时查看家人或设备的准确位置" data-en="📍 Real-time Tracking: See your family or device's exact location anytime.">📍 实时位置追踪：随时查看家人或设备的准确位置</li>
+      <li data-zh="🕒 位置历史：回顾详细的行动轨迹" data-en="🕒 Location History: Review detailed movement routes.">🕒 位置历史：回顾详细的行动轨迹</li>
+      <li data-zh="🚧 安全区域提醒：设置家、学校或公司，进出实时通知" data-en="🚧 Safe Zones: Get alerts when family enters or leaves defined areas.">🚧 安全区域提醒：设置家、学校或公司，进出实时通知</li>
+      <li data-zh="🆘 一键SOS：紧急情况下快速发送求助" data-en="🆘 One-tap SOS: Instantly send help alerts in emergencies.">🆘 一键SOS：紧急情况下快速发送求助</li>
+      <li data-zh="🔎 遗失设备查找：定位丢失或被盗手机" data-en="🔎 Lost Device Finder: Locate missing or stolen phones.">🔎 遗失设备查找：定位丢失或被盗手机</li>
+      <li data-zh="📱 多设备支持：一个账号可管理多个设备" data-en="📱 Multi-device Support: Manage multiple devices with one account.">📱 多设备支持：一个账号可管理多个设备</li>
     </ul>
   </section>
 
   <section class="reviews">
-    <h2>💬 用户评论</h2>
+    <h2 data-zh="💬 用户评论" data-en="💬 User Reviews">💬 用户评论</h2>
     <div class="review">
       <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="用户1">
       <div class="review-content">
         <div class="stars">★★★★★</div>
-        <p>“有了 Phone Tracker，我再也不用担心孩子放学没到家了！”</p>
+        <p data-zh="“有了 Phone Tracker，我再也不用担心孩子放学没到家了！”" 
+           data-en="“With Phone Tracker, I never worry about my kids getting home late again!”">
+           “有了 Phone Tracker，我再也不用担心孩子放学没到家了！”
+        </p>
       </div>
     </div>
     <div class="review">
       <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="用户2">
       <div class="review-content">
         <div class="stars">★★★★★</div>
-        <p>“定位精准，界面简单，真的很好用。”</p>
+        <p data-zh="“定位精准，界面简单，真的很好用。”" 
+           data-en="“Accurate tracking, simple interface — really easy to use.”">
+           “定位精准，界面简单，真的很好用。”
+        </p>
       </div>
     </div>
     <div class="review">
       <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="用户3">
       <div class="review-content">
         <div class="stars">★★★★★</div>
-        <p>“手机丢过一次，多亏了这个软件帮我找回来。”</p>
+        <p data-zh="“手机丢过一次，多亏了这个软件帮我找回来。”" 
+           data-en="“Lost my phone once — this app helped me get it back!”">
+           “手机丢过一次，多亏了这个软件帮我找回来。”
+        </p>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="contact">
-        <h3>📩 联系我们</h3>
-        <p>如有问题或建议，请发送邮件至：<a href="mailto:phonetracker.feedback@outlook.com">phonetracker.feedback@outlook.com</a></p>
+        <h3 data-zh="📩 联系我们" data-en="📩 Contact Us">📩 联系我们</h3>
+        <p data-zh="如有问题或建议，请发送邮件至：" data-en="For inquiries or feedback, email us at:">
+          如有问题或建议，请发送邮件至：
+          <a href="mailto:phonetracker.feedback@outlook.com">phonetracker.feedback@outlook.com</a>
+        </p>
     </div>
     <br>
     <p>© 2025 Phone Tracker 版权所有</p>
   </footer>
 
   <script>
-    // 深色模式切换
-    const toggleBtn = document.querySelector('.dark-mode-toggle');
-    toggleBtn.addEventListener('click', () => {
+    // 夜间模式
+    document.querySelector('.dark-mode-toggle').addEventListener('click', () => {
       document.body.classList.toggle('dark');
     });
 
-    // 图片轮播（自动+手动切换）
+    // 图片轮播
     const images = document.querySelectorAll('.carousel img');
     let index = 0;
     function showImage(i) {
@@ -286,9 +316,17 @@
       index = (index + 1) % images.length;
       showImage(index);
     });
+
+    // 语言切换功能
+    const langBtn = document.querySelector('.lang-select');
+    langBtn.addEventListener('click', () => {
+      const currentLang = langBtn.textContent.includes('EN') ? 'en' : 'zh';
+      const newLang = currentLang === 'en' ? 'zh' : 'en';
+      document.querySelectorAll('[data-' + newLang + ']').forEach(el => {
+        el.textContent = el.getAttribute('data-' + newLang);
+      });
+      langBtn.textContent = newLang === 'en' ? '🌐 EN' : '🌐 中文';
+    });
   </script>
 </body>
 </html>
-
-
-
